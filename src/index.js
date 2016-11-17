@@ -25,7 +25,6 @@ app.get('/token', function(req, res){
 app.get('/protected', expressJwt({secret}), function(req, res){
     return res.json(req.user);
 });
-console.log('upd');
 app.listen(3000, () => {
     console.log('app is running on port 3000');
 });
